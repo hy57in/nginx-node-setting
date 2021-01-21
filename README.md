@@ -2,6 +2,13 @@
 
 Capture screenshot from Your webcam, sends it into server. The server save it in `/public/uploads` folder.
 
+## Clone repository
+
+```
+git clone https://github.com/MSBT-2021-Silicon-Valley-Internship/nginx-node-setting.git
+
+```
+
 ## How to run
 
 ```
@@ -28,15 +35,16 @@ To change API URI You can edit:
 App -> uploadImage method
 const url = '/upload-face';
 ```
-"# webcam-react-nginx-express" 
 
+"# webcam-react-nginx-express"
 
 # Nginx 연결(우분투)
+
 1. root folder에서 npm run build
 2. build내부에 있는 file들 옮기기 : cp -r build/ /var/www/dir_name
-3. /etc/nginx/sites-available folder의 default 파일에서 : root  /var/www/dir_name
-4. 그대로 default파일에서 
-location /{
-    #...
-    try_files $uri $uri/ index.html;
-}
+3. /etc/nginx/sites-available folder의 default 파일에서 : root /var/www/dir_name
+4. 그대로 default파일에서
+   location /{
+   #...
+   try_files $uri $uri/ index.html;
+   }
