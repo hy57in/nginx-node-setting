@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Webcam from 'react-webcam';
 import ReactJson from 'react-json-view'
+import './CameraTest.css';
 
 
 class CameraTest extends Component {
@@ -55,7 +56,6 @@ class CameraTest extends Component {
     return (
       <div className="camera">
         <div>
-          <h3>Take screenshot</h3>
           <Webcam
             audio={false}
             height={350}
@@ -63,8 +63,13 @@ class CameraTest extends Component {
             ref={this.setRef}
             screenshotFormat="image/jpeg"
           />
-          <button onClick={() => this.capture()}>Capture photo</button>
         </div>
+      <div class="site__box-link">
+        <a class="btn btn--width" onClick={() => this.capture()}>
+          Capture
+        </a>
+      </div>
+
 
         <div>
           <h3>Last screenshot</h3>
